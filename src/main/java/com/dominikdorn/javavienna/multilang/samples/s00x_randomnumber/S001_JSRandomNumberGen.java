@@ -1,5 +1,6 @@
-package com.dominikdorn.javavienna.multilang.samples.s01_randomnumber;
+package com.dominikdorn.javavienna.multilang.samples.s00x_randomnumber;
 
+import com.dominikdorn.javavienna.multilang.samples.RandomNumberGen;
 import org.graalvm.polyglot.*;
 
 public class S001_JSRandomNumberGen implements RandomNumberGen {

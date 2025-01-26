@@ -1,14 +1,11 @@
-package com.dominikdorn.javavienna.multilang.samples.s01_randomnumber;
+package com.dominikdorn.javavienna.multilang.samples.s00x_randomnumber;
 
+import com.dominikdorn.javavienna.multilang.samples.RandomNumberGen;
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import org.graalvm.polyglot.Context;
 import org.graalvm.polyglot.Source;
 import org.graalvm.polyglot.Value;
-import org.graalvm.polyglot.*;
-import org.graalvm.polyglot.io.ByteSequence;
 
 public class S004_WasmRandomNumberGen implements RandomNumberGen {
 

@@ -1,16 +1,15 @@
-package com.dominikdorn.javavienna.samples.s01_randomnumber;
+package com.dominikdorn.javavienna.samples;
 
-import com.dominikdorn.javavienna.multilang.samples.s01_randomnumber.RandomNumberGen;
-import com.dominikdorn.javavienna.multilang.samples.s01_randomnumber.S001_JSRandomNumberGen;
-import com.dominikdorn.javavienna.multilang.samples.s01_randomnumber.S002_PyRandomNumberGen;
-import com.dominikdorn.javavienna.multilang.samples.s01_randomnumber.S003_RubyRandomNumberGen;
-import com.dominikdorn.javavienna.multilang.samples.s01_randomnumber.S004_WasmRandomNumberGen;
-import com.dominikdorn.javavienna.multilang.samples.s01_randomnumber.S005_JavaRandomNumberGen;
+import com.dominikdorn.javavienna.multilang.samples.RandomNumberGen;
+import com.dominikdorn.javavienna.multilang.samples.s00x_randomnumber.S001_JSRandomNumberGen;
+import com.dominikdorn.javavienna.multilang.samples.s00x_randomnumber.S002_PyRandomNumberGen;
+import com.dominikdorn.javavienna.multilang.samples.s00x_randomnumber.S003_RubyRandomNumberGen;
+import com.dominikdorn.javavienna.multilang.samples.s00x_randomnumber.S004_WasmRandomNumberGen;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class RandomNumberTest {
+public class S00_RandomNumberGenTest {
 
   private void testRandomNumber(RandomNumberGen gen) {
 
