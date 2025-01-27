@@ -2,7 +2,7 @@ footer:The power of Graal: Using JavaScript, Python and WebAssembly in your Java
 slidenumbers: true
 
 # The Power Of Graal
-## Using JavaScript, Python and WebAssembly in your Java Apps
+## Using JavaScript, Python, Ruby and WebAssembly in your Java Apps
 
 ### Java Vienna - Dominik Dorn
 
@@ -20,11 +20,18 @@ slidenumbers: true
 - Performance optimizations with Graal compiler
 - Native Image support for fast startup times
 
+--- 
+
+# Why Use GraalVM?
+
+- you are probably using it yet already!
+- IntelliJ Idea http client uses it!
+
 ---
 
-# Shoutout
+# Shoutout to today's audience
 
-- Gergö Baranyi - native image wizardry
+- Gergö Barany - native image wizardry
 - Christian Hummer - Truffle Framework Lead
 
 ---
@@ -164,7 +171,7 @@ module com.mycompany.app {
 
 # NodeJS Integration
 
-- https://github.com/oracle/graaljs/releases/
+- [https://github.com/oracle/graaljs/releases/](https://github.com/oracle/graaljs/releases/)
 - download graalnodejs-jvm-24.1.2-macos-aarch64.tar.gz
 - important on Mac:
   - xattr -d com.apple.Quarantine graalnodejs-jvm-24.1.2-macos-aarch64.tar.gz
