@@ -4,10 +4,6 @@ const path = require("path");
 const url = require("url");
 require("colors");
 
-// Enable Java class lookup (GraalVM-specific)
-Polyglot.eval('java', 'java.lang.System.setProperty("polyglot.js.allowHostAccess", "true")');
-Polyglot.eval('java', 'java.lang.System.setProperty("polyglot.js.allowHostClassLookup", "true")');
-
 const springCtxClass = Java.type("com.dominikdorn.javavienna.multilang.SpringEntryPoint")
 
 const springCtx = springCtxClass.buildCtx();

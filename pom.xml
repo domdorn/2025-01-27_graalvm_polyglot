@@ -19,49 +19,50 @@
             <groupId>org.graalvm.polyglot</groupId>
             <artifactId>polyglot</artifactId>
             <version>24.1.2</version>
+            <scope>compile</scope>
         </dependency>
-        <dependency>
-            <groupId>org.graalvm.polyglot</groupId>
-            <artifactId>wasm-community</artifactId>
-            <version>24.1.2</version>
-            <type>pom</type>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.graalvm.polyglot</groupId>
-            <artifactId>ruby-community</artifactId>
-            <version>24.1.2</version>
-            <type>pom</type>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.graalvm.polyglot</groupId>
-            <artifactId>js-community</artifactId>
-            <version>24.1.2</version>
-            <type>pom</type>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.graalvm.polyglot</groupId>
-            <artifactId>python-community</artifactId>
-            <version>24.1.2</version>
-            <type>pom</type>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.graalvm.polyglot</groupId>
-            <artifactId>java-community</artifactId>
-            <version>24.1.2</version>
-            <type>pom</type>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.graalvm.polyglot</groupId>
-            <artifactId>llvm-community</artifactId>
-            <version>24.1.2</version>
-            <type>pom</type>
-            <scope>runtime</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.graalvm.polyglot</groupId>-->
+<!--            <artifactId>wasm-community</artifactId>-->
+<!--            <version>24.1.2</version>-->
+<!--            <type>pom</type>-->
+<!--            <scope>runtime</scope>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.graalvm.polyglot</groupId>-->
+<!--            <artifactId>ruby-community</artifactId>-->
+<!--            <version>24.1.2</version>-->
+<!--            <type>pom</type>-->
+<!--            <scope>runtime</scope>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.graalvm.polyglot</groupId>-->
+<!--            <artifactId>js-community</artifactId>-->
+<!--            <version>24.1.2</version>-->
+<!--            <type>pom</type>-->
+<!--            <scope>runtime</scope>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.graalvm.polyglot</groupId>-->
+<!--            <artifactId>python-community</artifactId>-->
+<!--            <version>24.1.2</version>-->
+<!--            <type>pom</type>-->
+<!--            <scope>runtime</scope>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.graalvm.polyglot</groupId>-->
+<!--            <artifactId>java-community</artifactId>-->
+<!--            <version>24.1.2</version>-->
+<!--            <type>pom</type>-->
+<!--            <scope>runtime</scope>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.graalvm.polyglot</groupId>-->
+<!--            <artifactId>llvm-community</artifactId>-->
+<!--            <version>24.1.2</version>-->
+<!--            <type>pom</type>-->
+<!--            <scope>runtime</scope>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
@@ -144,6 +145,7 @@
                 </configuration>
             </plugin>
             <!-- Maven Shade Plugin -->
+<!--
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
@@ -156,7 +158,7 @@
                         </goals>
                         <configuration>
                             <transformers>
-                                <!-- Set the Main-Class in MANIFEST.MF -->
+                                &lt;!&ndash; Set the Main-Class in MANIFEST.MF &ndash;&gt;
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <mainClass>com.example.Main</mainClass>
                                 </transformer>
@@ -165,6 +167,7 @@
                     </execution>
                 </executions>
             </plugin>
+-->
         </plugins>
     </build>
 

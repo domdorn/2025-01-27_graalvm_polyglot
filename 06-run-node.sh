@@ -6,6 +6,5 @@ if [ ! -f target/multilang-1.0-SNAPSHOT-shaded.jar ]; then
 fi;
 
 
-#node --vm.cp=target/multilang-1.0-SNAPSHOT-shaded.jar app.js
-node --vm.cp=target/multilang-1.0-SNAPSHOT:target/modules --jvm --polyglot app.js
+node --jvm --vm.cp=target/multilang-1.0-SNAPSHOT.jar:target/modules app.js
 
