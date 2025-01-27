@@ -32,7 +32,7 @@ slidenumbers: true
 # Shoutout to today's audience
 
 - Gergö Barany - native image wizardry
-- Christian Hummer - Truffle Framework Lead
+- Christian Humer - Truffle Framework Lead
 
 ---
 
