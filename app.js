@@ -4,7 +4,17 @@ const path = require("path");
 const url = require("url");
 require("colors");
 
-const calculator = Java.type("com.dominikdorn.javavienna.multilang.samples.s50x_node.NodeEntryPoint");
+// Enable Java class lookup (GraalVM-specific)
+Polyglot.eval('java', 'java.lang.System.setProperty("polyglot.js.allowHostAccess", "true")');
+Polyglot.eval('java', 'java.lang.System.setProperty("polyglot.js.allowHostClassLookup", "true")');
+
+const springCtxClass = Java.type("com.dominikdorn.javavienna.multilang.SpringEntryPoint")
+
+const springCtx = springCtxClass.buildCtx();
+
+const calculator = springCtx.getBean("calculator");
+
+// const calculator = Java.type("com.dominikdorn.javavienna.multilang.samples.s50x_node.NodeEntryPoint");
 
 const server = http.createServer((req, res) => {
   const parsedUrl = url.parse(req.url, true);
