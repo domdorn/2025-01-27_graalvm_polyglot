@@ -7,6 +7,7 @@ import com.dominikdorn.javavienna.multilang.samples.Calculator;
 import com.dominikdorn.javavienna.multilang.samples.s10x_call_functions.S101_JSCalculator;
 import com.dominikdorn.javavienna.multilang.samples.s10x_call_functions.S102_PyCalculator;
 import com.dominikdorn.javavienna.multilang.samples.s10x_call_functions.S103_RubyCalculator;
+import com.dominikdorn.javavienna.multilang.samples.s10x_call_functions.S104_AdvancedJSCalculator;
 import org.junit.jupiter.api.Test;
 
 public class S10_CalculatorTest {
@@ -42,5 +43,12 @@ public class S10_CalculatorTest {
   }
 
   // no wasm calculator - lack of time
+
+  @Test
+  void testAdvancedJSCalculator() throws Exception {
+    try (var calc = new S104_AdvancedJSCalculator()) {
+      testCalculator(calc);
+    }
+  }
 
 }
