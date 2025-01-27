@@ -1,6 +1,5 @@
 package com.dominikdorn.javavienna.samples;
 
-import static org.graalvm.wasm.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.dominikdorn.javavienna.multilang.samples.PersonJsonParser;
