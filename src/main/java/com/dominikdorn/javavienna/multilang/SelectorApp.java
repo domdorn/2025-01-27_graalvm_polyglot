@@ -8,6 +8,8 @@ import com.dominikdorn.javavienna.multilang.samples.s00x_randomnumber.S004_WasmR
 import com.dominikdorn.javavienna.multilang.samples.s10x_call_functions.S101_JSCalculator;
 import com.dominikdorn.javavienna.multilang.samples.s10x_call_functions.S102_PyCalculator;
 import com.dominikdorn.javavienna.multilang.samples.s10x_call_functions.S103_RubyCalculator;
+import com.dominikdorn.javavienna.multilang.samples.s10x_call_functions.S104_AdvancedJSCalculator;
+import com.dominikdorn.javavienna.multilang.samples.s20x_value_access.S201_JSPersonJsonParserUnsafe;
 import java.util.Scanner;
 
 public class SelectorApp {
@@ -23,6 +25,15 @@ public class SelectorApp {
       System.out.println("002 - Get a random number from python");
       System.out.println("003 - Get a random number from ruby");
       System.out.println("004 - Get a random number from wasm");
+      System.out.println("101 - Simple JS Calculator");
+      System.out.println("102 - Simple Python Calculator");
+      System.out.println("103 - Ruby Calculator");
+      System.out.println("104 - Advanced JS Calculator");
+//      System.out.println("201 - JSON Parser JS Unsafe");
+//      System.out.println("301 - JSON Parser JS Safe");
+//      System.out.println("302 - Json Parser Python");
+//      System.out.println("303 - Json Parser Ruby");
+//      System.out.println("401 - exposing java methods");
 
 
 
@@ -69,6 +80,19 @@ public class SelectorApp {
             System.out.println("Result 5+3 = " + result);
           }
         }
+
+        case "104": {
+          try(var calc = new S104_AdvancedJSCalculator()) {
+            var result = calc.add(5,3);
+            System.out.println("Result 5+3 = " + result);
+          }
+        }
+//        case "201": {
+//          try(var parser = new S201_JSPersonJsonParserUnsafe()){
+//            parser.
+//          }
+//        }
+
 
         case "exit":
           System.out.println("bye bye");
