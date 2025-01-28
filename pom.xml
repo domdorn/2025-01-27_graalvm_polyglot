@@ -19,6 +19,7 @@
             <groupId>org.graalvm.polyglot</groupId>
             <artifactId>polyglot</artifactId>
             <version>24.1.2</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.graalvm.polyglot</groupId>
@@ -68,6 +69,13 @@
             <version>5.10.4</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>6.2.2</version>
+        </dependency>
+
     </dependencies>
 
 
@@ -136,6 +144,30 @@
                     </includes>
                 </configuration>
             </plugin>
+            <!-- Maven Shade Plugin -->
+<!--
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.5.0</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <transformers>
+                                &lt;!&ndash; Set the Main-Class in MANIFEST.MF &ndash;&gt;
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>com.example.Main</mainClass>
+                                </transformer>
+                            </transformers>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+-->
         </plugins>
     </build>
 

@@ -2,8 +2,11 @@ package com.dominikdorn.javavienna.multilang.samples.s10x_call_functions;
 
 import com.dominikdorn.javavienna.multilang.samples.Calculator;
 import org.graalvm.polyglot.Context;
+import org.graalvm.polyglot.HostAccess.Export;
 import org.graalvm.polyglot.Value;
+import org.springframework.stereotype.Component;
 
+@Component(value = "calculator")
 public class S104_AdvancedJSCalculator implements Calculator {
 
   // language=javascript
@@ -32,21 +35,25 @@ public class S104_AdvancedJSCalculator implements Calculator {
 
 
   @Override
+  @Export
   public int add(int a, int b) {
     return add.execute(a,b).asInt();
   }
 
   @Override
+  @Export
   public int subtract(int a, int b) {
     return sub.execute(a,b).asInt();
   }
 
   @Override
+  @Export
   public int multiply(int a, int b) {
     return mul.execute(a,b).asInt();
   }
 
   @Override
+  @Export
   public double divide(int a, int b) {
     return div.execute(a,b).asDouble();
   }
