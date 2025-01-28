@@ -4,7 +4,11 @@ const path = require("path");
 const url = require("url");
 require("colors");
 
-const calculator = Java.type("com.dominikdorn.javavienna.multilang.samples.s50x_node.NodeEntryPoint");
+const springCtxClass = Java.type("com.dominikdorn.javavienna.multilang.SpringEntryPoint")
+
+const springCtx = springCtxClass.buildCtx();
+
+const calculator = springCtx.getBean("calculator");
 
 const server = http.createServer((req, res) => {
   const parsedUrl = url.parse(req.url, true);
@@ -31,7 +35,22 @@ const server = http.createServer((req, res) => {
     }
 
     try {
-      const result = calculator.runCalc(op, parseInt(a), parseInt(b));
+      let result = 0.0;
+      switch (op) {
+        case "add":
+          result = calculator.add(parseInt(a), parseInt(b));
+          break;
+        case "sub":
+          result = calculator.subtract(parseInt(a), parseInt(b));
+          break;
+        case "mult":
+          result = calculator.multiply(parseInt(a), parseInt(b));
+          break;
+        case "div":
+          result = calculator.divide(parseInt(a), parseInt(b));
+          break;
+      }
+
       res.writeHead(200, { "Content-Type": "application/json" });
       res.end(JSON.stringify({ result }));
     } catch (error) {
