@@ -33,6 +33,7 @@ slidenumbers: true
 
 - Gergö Barany - native image wizardry
 - Christian Humer - Truffle Framework Lead
+- Matthias N. - Security guy.
 
 ---
 

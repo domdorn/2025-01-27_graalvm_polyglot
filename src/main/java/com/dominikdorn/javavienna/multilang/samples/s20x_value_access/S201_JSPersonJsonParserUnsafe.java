@@ -9,7 +9,9 @@ public class S201_JSPersonJsonParserUnsafe implements PersonJsonParser {
   final Context context;
 
   public S201_JSPersonJsonParserUnsafe() {
-    context = Context.newBuilder("js").build();
+    context = Context.newBuilder("js")
+
+        .build();
   }
 
   @Override

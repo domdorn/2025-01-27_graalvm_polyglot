@@ -10,9 +10,12 @@ public class S002_PyRandomNumberGen implements RandomNumberGen {
   @Override
   public double getRandomNumber() {
     try (Context context = Context.create("python")) {
-      Value result = context.eval("python", """
-      import random
 
+      Value result = context.eval("python",
+      //language=python
+      """
+      import random
+      
       random.random();
       """);
       return result.asDouble();

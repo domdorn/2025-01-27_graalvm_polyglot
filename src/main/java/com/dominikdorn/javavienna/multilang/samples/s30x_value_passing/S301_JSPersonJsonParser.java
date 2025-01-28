@@ -20,9 +20,13 @@ public class S301_JSPersonJsonParser implements PersonJsonParser, PersonJsonSeri
   public Person parse(String json) {
     var binding = context.getBindings("js");
     binding.putMember("jsonString", json);
+    // right way
     var result = context.eval("js", """
         JSON.parse(jsonString)
         """);
+
+//    var esult2 = context.eval("js",
+//        "JSON.parse(" + json + ")"); // wrong way
     var name = result.getMember("name").asString();
     var age = result.getMember("age").asInt();
     return new Person(name, age);
@@ -63,7 +67,7 @@ public class S301_JSPersonJsonParser implements PersonJsonParser, PersonJsonSeri
                     result[key] = value;
                 }
             });
-
+        
             return JSON.stringify(result);
         })(obj);
         """).asString();

@@ -8,7 +8,9 @@ public class S001_JSRandomNumberGen implements RandomNumberGen {
   @Override
   public double getRandomNumber() {
     try (Context context = Context.create("js")) {
-      Value result = context.eval("js", "Math.random()");
+      Value result = context.eval("js",
+          // language=javascript
+          "Math.random()");
       return result.asDouble();
     }
   }

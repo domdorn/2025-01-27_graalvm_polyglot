@@ -36,7 +36,7 @@ public class S004_WasmRandomNumberGen implements RandomNumberGen {
 
 
       // ausfuehren
-      Value result = context .getBindings("wasm")
+      Value result = context.getBindings("wasm")
           .getMember("example")
           .getMember("get_random_number")
           .execute();

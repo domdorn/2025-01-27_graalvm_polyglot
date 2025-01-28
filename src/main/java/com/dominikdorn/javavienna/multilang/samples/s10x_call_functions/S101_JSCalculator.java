@@ -38,7 +38,7 @@ public class S101_JSCalculator implements Calculator {
   public double divide(int a, int b) {
     Value function = context.eval("js", " (a, b) => a / b");
     Value resultValue = function.execute(a, b);
-    return resultValue.asInt();
+    return resultValue.asDouble();
   }
 
   @Override
